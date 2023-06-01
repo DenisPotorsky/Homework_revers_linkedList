@@ -9,11 +9,21 @@ public class Example {
         }
     }
 
+
+
     Node head;
     Node[] nodeArray = new Node[16];
 
+
+
     int size() {
-        return nodeArray.length;
+        int count = 0;
+        while (true) {
+            if (nodeArray[count] != null) {
+                count++;
+            } else break;
+        }
+        return count;
     }
 
     boolean containsKey(Integer key) {
@@ -106,6 +116,7 @@ public class Example {
         nodeArray[temp.hash] = temp;
         return null;
     }
+
 }
 
 class Node {
@@ -113,5 +124,6 @@ class Node {
     int hash;
     Node next;
 }
+
 
 
