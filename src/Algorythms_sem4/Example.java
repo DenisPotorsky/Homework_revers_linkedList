@@ -7,21 +7,22 @@ public class Example {
         for (int i = 0; i < 16; i++) {
             example.put(i + 1, i);
         }
+        example.remove(2);
+        example.remove(4);
+        System.out.println(example.size());
     }
-
 
 
     Node head;
     Node[] nodeArray = new Node[16];
 
 
-
     int size() {
         int count = 0;
-        while (true) {
-            if (nodeArray[count] != null) {
-                count++;
-            } else break;
+        for (int i = 0; i < nodeArray.length; i++) {
+            if (nodeArray[i] != null) {
+                count += 1;
+            }
         }
         return count;
     }
